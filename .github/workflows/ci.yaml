@@ -14,7 +14,11 @@ jobs:
     
     steps:
       - name: Generar la imagen
-        run: docker build -t springboot_app:v1 .
+        uses: docker/build-push-action@v2
+        with:
+            context: .
+            file: ./Dockerfile
+        
 
       - name: Login en DockerHub
         uses: docker/login-action@f4ef78c080cd8ba55a85445d5b36e214a81df20a
