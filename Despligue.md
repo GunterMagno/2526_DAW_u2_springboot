@@ -18,6 +18,9 @@ El cual utiliza la acción `docker/login-action@f4ef78c080cd8ba55a85445d5b36e214
 
 ![Captura de Login sin exponer credenciales](/evidencias/Captura1.png)
 
+Aqui dejo una imagen de donde se configura las credenciales secretas del repositorio
+![Captura de la configuracion en GitHub](/evidencias/Captura3.png)
+
 ## Generación de la imagen
 
 Para generar la imagen utilizo un actions de docker que crea la imagen y despues la sube a DockerHub
@@ -29,6 +32,12 @@ Aqui abajo dejo una imagen de como se ven los logs del workflow al hacer el buil
 ![Captura de los logs](/evidencias/Captura2.png)
 
 [Enlace a la Imagen en DockerHub](https://hub.docker.com/repository/docker/gunterelmagno/springboot_app/general)
+
+## Subir imagen a DockerHub
+
+Este paso utiliza el mismo actions que el paso anterior, dejo una imagen de los logs de como se hace el push de la imagen en el workflow.
+
+![Captura de los logs en el workflow](/evidencias/Captura4.png)
 
 # Otros Cambios
 
