@@ -2,7 +2,7 @@ name: Subir imagen Docker a DockerHub
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "master" ]
   workflow_dispatch:
 
 permissions:
@@ -14,7 +14,7 @@ jobs:
     
     steps:
       - name: Generar la imagen
-        run: docker build -t springboot_app:v1
+        run: docker build -t springboot_app:v1 .
 
       - name: Login en DockerHub
         uses: docker/login-action@f4ef78c080cd8ba55a85445d5b36e214a81df20a
