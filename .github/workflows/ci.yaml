@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  test-and-update:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Generar la imagen
+        run: docker build -t springboot_app:v1
+
+      - name: Login en DockerHub
+        run: doker login 
+        Como hago el login?¿?¿?¿?¿?¿¡'
+
+      - name: Ponerle tag v1 a la imagen
+        run: docker tag springboot_app:v1 gunterelmagno/springboot_app:v1
+
+      - name: Ponerle tag latest a la imagen
+        run: docker tag springboot_app:latest gunterelmagno/springboot_app:latest
+
+      - name: Subir imagen v1 a DockerHub
+        run: docker push gunterelmagno/springboot_app:v1
+      
+      - name: Subir imagen latest a DockerHub
+        run: docker push gunterelmagno/springboot_app:latest
+
+      - name: Commit automatico de los cambios
+        uses: stefanzweifel/git-auto-commit-action@v5
