@@ -43,4 +43,7 @@ Aqui esta el enlace a la imagen ya en DockerHub
 
 Tambien para la practica e cambiado el header de la página para que se vea reflejado mi nombre cuando entres en la pagina, lo e cambiado en el html como se ve en el codigo de abajo.
 
-[Enlace al codigo html](https://github.com/GunterMagno/2526_DAW_u2_springboot/blob/59d857cd2841f5fd0a1ea13379ea1a22fac457e4/src/main/resources/templates/index.html#L12)
+https://github.com/GunterMagno/2526_DAW_u2_springboot/blob/59d857cd2841f5fd0a1ea13379ea1a22fac457e4/src/main/resources/templates/index.html#L12
+
+
+![Captura de la aplicacion con el cambio](/evidencias/Captura5.png)
